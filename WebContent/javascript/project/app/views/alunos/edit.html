@@ -1,0 +1,45 @@
+<div class="panel" ng-controller="alunosController" ng-init="initEdit()">
+	<div class="panel clearfix">
+		<div class="title-space">
+			<h1>Editar Aluno</h1>
+		</div>
+	</div>
+	
+	<div class="panel-body">
+		<br/>
+		
+		<form ng-submit="updateAluno(aluno)" class="form-inline" >
+			<input type="hidden" ng-model="aluno.id"/> 
+			<div class="form-group">
+				<label>Nome</label>
+				<input type="text" ng-model="aluno.name" class="form-control" value=" {{ aluno.name }} "  required/>
+			</div>
+			
+			<br/><br/>
+			
+			<div class="form-group">
+				<label>Idade</label>
+				<input type="text" ng-model="aluno.age" class="form-control" value=" {{ aluno.age }} "  required/>
+			</div>
+						
+			<br/><br/>
+
+			<div class="form-group">
+				<label>Aprovado</label>
+				<input type="text" ng-model="aluno.approved" class="form-control" value=" {{ aluno.approved }} "  required/>
+			</div>
+			
+			<br/><br/>
+			
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Editar"/>
+			</div>
+		</form>
+		
+		<br/>
+		
+		<div>
+			<a href="#/raiz/alunos" class="btn btn-default">Voltar</a>
+		</div>
+	</div>
+</div>

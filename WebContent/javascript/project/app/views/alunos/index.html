@@ -1,0 +1,35 @@
+<div class="panel" ng-controller="alunosController" ng-init="init()">
+	<div class="panel clearfix">
+		<div class="title-space">
+			<h1>Alunos</h1>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<table style="width: 80%;">
+			<tr>
+				<th>Nome</th>
+				<th>Idade</th>
+				<th>Aprovado</th>
+				<th />
+			</tr>
+
+			<tr ng-repeat="aluno in alunos">
+				<td> {{ aluno.name }}</td>
+				<td> {{ aluno.age }} </td>
+				<td> {{ aluno.approved }} </td>
+				<td><button ng-click="editAluno(aluno)" class="btn btn-success">Editar</button></td>
+			</tr>
+		</table>
+		
+		<br/>
+		
+		<button ng-click="new()" class="btn btn-success">Criar Novo</button>
+		
+		<br/>
+		<br/>
+		
+		<a href="#/raiz" class="btn btn-default">Voltar</a>
+		
+	</div>
+</div>
